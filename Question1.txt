@@ -1,0 +1,43 @@
+
+import java.util.Collections;
+import java.util.Scanner;
+import java.util.ArrayList;
+public class Main {
+	public static void main(String args[])
+	{
+	   ArrayList<Integer> list=new ArrayList<Integer>();
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the list");
+		int n=sc.nextInt();
+		
+		for(int i=0;i<n;i++){
+		    list.add(sc.nextInt());
+		}
+	int sum=0;
+	int avg=0;
+        int max = list.get(0);
+        int n1 = list.size();
+        
+     for(int i=0;i<n1;i++){
+         sum=sum+list.get(i);
+        avg = sum / list.size();
+     }
+     
+        for (int i = 1; i < n1; i++) {
+            if (list.get(i) > max) {
+                max = list.get(i);
+            }
+        }
+          System.out.println("Maximum is : " + max);
+      
+        System.out.println("Average is : " + avg);
+    
+       Collections.sort(list);  
+     System.out.println("ArrayList After Sorting:");  
+         for(int marks: list){
+             System.out.println(marks);
+             
+         }  
+
+	}
+}
